@@ -17,7 +17,7 @@ def total(values):
 
 def part1(schematic):
     symbols = set(
-        parse_calibration("[^.|\d]", ".".join([x.rstrip("\n") for x in schematic]))
+        parse_calibration(r"[^.|\d]", ".".join([x.rstrip("\n") for x in schematic]))
     )
     valid_value = []
     for idx, _row in enumerate(schematic):
@@ -46,7 +46,6 @@ def part1(schematic):
                     if x in symbols:
                         valid_value.append(numb)
     return valid_value
-
 
 
 if __name__ == "__main__":
